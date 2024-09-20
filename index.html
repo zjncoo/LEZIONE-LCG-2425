@@ -1,21 +1,46 @@
 <!-- definiamo il nostro primo esempio -->
 <!DOCTYPE html>
+<html lang="en">
 <head>
-    <title> Indice di Pagina della Sezione C2 LCG-IA </title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Francesco Zanchetta Portfolio</title>
+  <link rel="stylesheet" href="index.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- vorrei rappresentare un indice con un collegamento ad altre pagine HTML
-     vorrei che se lo clicco mi porti in una nuova pagina HTML -->
-    <h1> INDICE di IA C2 </h1>
-    <p>
-        <ul>
-            <li><a href="../lezione 1/lezione1.html">Lezione 1</a></li>
-            <li> Lezione 2</li>
-            <li> Lezione 3</li>
-            <li> Lezione 4</li>
-            <li> Lezione 5</li>
-            <li> Lezione 6</li>
-        </ul>
-    </p>
+
+  <!-- Landing Section -->
+  <section class="landing">
+    <div class="content">
+      <img src="../lezione 1/FOTO/logo_zinco.svg" id="logo">
+      <h1>LAB Information Design</h1>
+      <a href="#progetti"><button class="scroll-btn">Scopri le Lezioni</button></a>
+    </div>
+  </section>
+
+  <!-- Hidden Section with Links -->
+  <section class="links" id="progetti">
+    <h2>Lezioni</h2>
+    <ul>
+      <li><a href="../lezione 1/lezione1.html">Lezione 1</a></li>
+      <li><a href="../lezione 1/lezione2.html">Lezione 1 IA</a></li>
+    </ul>
+  </section>
+
+  <!-- Footer Section -->
+<footer>
+    <div class="footer-content">
+      <p>Contatti</p>
+        <a href="mailto:francesco.zanchetta@mail.polimi.it">francesco.zanchetta@mail.polimi.it</a></li>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 Francesco Zanchetta.</p>
+    </div>
+  </footer>
+  
+  
 
 </body>
+</html>
