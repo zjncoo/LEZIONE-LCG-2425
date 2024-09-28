@@ -41,6 +41,7 @@ html {
 @keyframes fadeIn {
     from {
       opacity: 0;
+      width: 100%;
       transform: translateY(20px); /* Optional: Add a slight upward movement */
     }
     to {
