@@ -10,7 +10,7 @@ function draw() {
   push();
   strokeWeight(1);
   fill("orange");
-  rotate(angle);
+  rotate(angle*0.1);
   rect(50, 50, 100, 50);
   pop();
   // translate(100,100);
