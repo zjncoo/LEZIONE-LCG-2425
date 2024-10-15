@@ -1,0 +1,170 @@
+/* Body Styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  background-color: #000; /* Black background */
+  color: #fff; /* White text */
+  align-items: center;
+  justify-items: center;
+  justify-content: center;
+}
+
+
+/* Navbar Styles */
+.logo-link {
+  display: block;
+}
+
+.logo {
+  width: 50px; /* Small logo size */
+  height: auto; /* Maintain aspect ratio */
+}
+
+/* Transparent Navigation Bar */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  backdrop-filter: blur(10px); /* Blur effect */
+  align-items: center;
+  padding: 15px 0;
+  background-color: rgba(255, 255, 255, 0); /* Transparent background */
+  z-index: 1000;
+}
+
+/* Logo Styling */
+.logo {
+  width: 100px; /* Adjust size of the logo */
+  transition: transform 0.3s ease;
+  padding: 10%;
+}
+
+.logo-link:hover .logo {
+  transform: scale(1.1); /* Slight zoom on hover */
+}
+
+
+/* Sezione Contenuto */
+/* Keyframes fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px); /* Add a slight upward movement */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Initially hide the logo and set animation */
+.content-section {
+  opacity: 0;
+  animation: fadeIn 1s ease-in-out forwards; /* Apply the animation */
+}
+
+
+.content-section {
+  width: 60vw; /* Set width to 60% of the viewport width */
+  max-width: 1200px; /* Optional: Set a max-width for larger screens */
+  top: 20%;
+  margin-top: 10%;
+  margin-left: 20%;
+  margin-right: 20%;
+  padding: 40px;
+  background-color: #1e1e1e; /* White background for the content section */
+  color: #ffffff; /* Black text */
+  border-radius: 25px;
+  box-shadow: 0 4px 8px rgba(65, 65, 65, 0.1); /* Light shadow for depth */
+}
+
+.content-section h1, .content-section h2, .content-section h3 {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.content-section blockquote {
+  border-left: 4px solid #000;
+  padding-left: 20px;
+  margin: 20px 0;
+  font-style: italic;
+}
+
+.content-section aside {
+  background-color: #373737; /* Light background for asides */
+  border-left: 4px solid #000;
+  padding: 10px 20px;
+  margin: 20px 0;
+  font-style: italic;
+}
+
+.content-section img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 20px 0;
+}
+
+.content-section a {
+  color: #007bff; /* Link color */
+  text-decoration: none;
+}
+
+.content-section a:hover {
+  text-decoration: underline;
+}
+
+.content-section ul {
+  list-style-type: disc;
+  margin-left: 20px;
+}
+
+iframe {
+  border-radius: 25px;
+}
+
+
+
+/*FOOTER*/
+/* Footer Styles */
+footer {
+  color: #fff;
+  padding: 30px 0;
+  text-align: center;
+}
+
+.footer-content p {
+  font-size: 1.5em;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.footer-content a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 400;
+  transition: color 0.3s ease;
+}
+
+.footer-content a:hover {
+  color: #ccc; /* darker color on hover */
+}
+
+/* Footer Bottom */
+.footer-bottom {
+  margin-top: 20px;
+  border-top: 1px solid #444; /* Light border for separation */
+  padding-top: 10px;
+}
+
+.footer-bottom p {
+  font-size: 0.9em;
+  font-weight: 300;
+}
