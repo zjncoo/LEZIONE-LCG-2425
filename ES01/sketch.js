@@ -40,23 +40,4 @@ function windowResized() {
 }
 
 
-function draw() {
-  background("#3c3b4b");
-  fill("#7280a8");
-  noStroke();
-  let altezza = 25;
-  let vGutter = 5;
 
-  let columns = windowWidth / (10+5);  
-  let rows = windowHeight / (altezza + vGutter);
-
-  for(let i = 0; i < columns; i++){
-    for(let r = 0; r < rows; r++){
-      
-      let xPos = i * 15 + random(-2.5, 2.5)
-      let yPos = r * (altezza + vGutter) + random(-2.5, 2.5)
-      
-      rect(xPos, yPos, 10, altezza);
-    }
-  }
-}
