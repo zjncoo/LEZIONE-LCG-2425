@@ -17,14 +17,13 @@ function draw() {
   let rows = (windowHeight / (larghezza + vGutter / 90)); // Numero di righe
 
   for (let r = 0; r < rows; r++) {
-    let gridSize = max(larghezza * (1 - r / rows), minSquareSize); // Dimensione base
-
-    // Randomize sizes only for individual squares
-    if (randomizeSizes) {
-      gridSize *= random(0.5, 1); // Applica il fattore casuale se randomizeSizes è true
-    }
-
     for (let i = 0; i < columns; i++) {
+      // Randomize sizes for each square
+      let gridSize = max(larghezza * (1 - r / rows), minSquareSize); // Dimensione base
+      if (randomizeSizes) {
+        gridSize *= random(0.5, 1); // Random factor for individual square
+      }
+
       // Calcola la posizione x e y con offset
       let xOffset = (r % 2) * (larghezza + vGutter) / 2; // Offset orizzontale per righe pari
       let yOffset = r * (larghezza + vGutter / 90); // Offset verticale per ogni riga
@@ -50,7 +49,7 @@ function windowResized() {
 
 // Aggiungi un event listener per la pressione di un tasto
 function keyPressed() {
-  if (key === 'r' || key === 'R') { // Se premi 'r', randomizza le dimensioni dei cubi per righe
+  if (key === 'r' || key === 'R') { // Se premi 'r', randomizza le dimensioni dei cubi singolarmente
     randomizeSizes = true;
     redraw();
   }
