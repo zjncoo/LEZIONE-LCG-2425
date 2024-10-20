@@ -8,7 +8,8 @@ canvas {
 }
 
 div {
-  background-color: white;
+  background: rgba(255, 255, 255, 0.3); /* Semi-transparent background */
+    backdrop-filter: blur(8px); /* Blurring effect */
   position: absolute;
   bottom: 3%;
   left: 2%;
@@ -20,6 +21,7 @@ div {
   height: fit-content;
   padding: 1%;
   border-radius: 10px;
+  box-shadow: 1px 1px 7px grey;
 }
 
 a {
