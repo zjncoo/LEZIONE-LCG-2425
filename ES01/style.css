@@ -6,3 +6,38 @@ html, body {
 canvas {
   display: block;
 }
+
+div {
+  background-color: white;
+  position: absolute;
+  bottom: 3%;
+  left: 2%;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  align-content: center;
+  width: 30%;
+  height: fit-content;
+  padding: 1%;
+  border-radius: 10px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  font-family: Inter;
+  font-weight: bold;
+  font-size: 90%;
+}
+
+a:hover {
+  color: darkgrey;
+}
+
+p {
+  font-size: 70%;
+  text-decoration: none;
+  color: black;
+  font-family: Inter;
+  font-weight: bold;
+}

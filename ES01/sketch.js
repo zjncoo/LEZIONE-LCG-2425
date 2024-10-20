@@ -1,43 +1,52 @@
+let randomizeSizes = false; // Variabile per controllare se randomizzare le dimensioni
+
 function setup() {
   createCanvas(windowWidth, windowHeight);
   noLoop();
-  
-  // Set the background color to black
-  background(0);
-  
-  // Calculate grid size based on the window size
-  let gridSize = min(windowWidth, windowHeight) / 20;  // Adjust gridSize relative to window size
-  let columns = floor(width / gridSize);  // Calculate number of columns
-  let rows = floor(height / gridSize); // Calculate number of rows
-  
-  for (let j = 0; j < rows; j++) {
-    // Map the rotation angle to increase progressively from 0 to a larger value as we go down
-    let maxAngle = map(j, 0, rows, 0, PI / 2);  // From 0 to 90 degrees (PI/2) as we go down
-    let rowAngle = random(maxAngle / 2, maxAngle);  // Randomize angle within an increasing range
-    
+}
+
+function draw() {
+  background(235, 236, 228);
+  noStroke();
+
+  let larghezza = 20;
+  let vGutter = 8;
+  let minSquareSize = 7;
+
+  let columns = (windowWidth / (larghezza + vGutter));
+  let rows = (windowHeight / (larghezza + vGutter / 30));
+
+  for (let r = 0; r < rows; r++) {
+    let gridSize = max(larghezza * (1 - r / rows), minSquareSize); // Dimensione base
+    if (randomizeSizes) {
+      gridSize *= random(0.5, 1.5); // Applica il fattore casuale se randomizeSizes è true
+    }
+
     for (let i = 0; i < columns; i++) {
-      let xPos = i * gridSize;
-      let yPos = j * gridSize;
-      
-      // Map the size of the squares based on the row (y-coordinate)
-      let squareSize = map(j, 0, rows, gridSize * 0.9, gridSize * 0.4);
+      let xPos = i * (larghezza + vGutter) + (r % 2) * (larghezza + vGutter) / 2; // Offset per righe pari
+      let yPos = r * (larghezza + r * vGutter / 30);
       
       push();
-      translate(xPos + gridSize / 2, yPos + gridSize / 2);
-      rotate(rowAngle);  // Apply random angle increasing with row index
-      fill(255);  // Color the squares white
-      noStroke();  // No stroke for cleaner appearance
+      translate(xPos, yPos);
+      rotate(PI / 4);
+      fill(0);
       rectMode(CENTER);
-      rect(0, 0, squareSize, squareSize);
+      rect(0, 0, gridSize, gridSize); // Disegna il quadrato
       pop();
     }
   }
+  
 }
 
 function windowResized() {
   resizeCanvas(windowWidth, windowHeight);
-  redraw();  // Redraw the grid when the window is resized
+  redraw();
 }
 
-
-
+// Aggiungi un event listener per la pressione di un tasto
+function keyPressed() {
+  if (key === 'r' || key === 'R') { // Se premi 'r', randomizza le dimensioni
+    randomizeSizes = true;
+    redraw();
+  }
+}
