@@ -7,7 +7,7 @@ canvas {
   display: block;
 }
 div {
-  background: rgba(255, 255, 255, 0.3); /* Semi-transparent background */
+  background: rgba(255, 255, 255, 0.09); /* Semi-transparent background */
     backdrop-filter: blur(8px); /* Blurring effect */
   position: absolute;
   bottom: 3%;
@@ -20,7 +20,7 @@ div {
   height: fit-content;
   padding: 1%;
   border-radius: 10px;
-  box-shadow: 1px 1px 7px grey;
+  box-shadow: 1px 1px 7px rgb(0, 0, 0);
 }
 
 p {
